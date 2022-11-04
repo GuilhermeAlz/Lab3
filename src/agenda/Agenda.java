@@ -41,7 +41,7 @@ public class Agenda {
 	 */
 	public Contato getContato(int posicao) {
 		if (this.contatos[posicao - 1] == null || posicao > 100 || posicao < 0) {
-			throw new IllegalArgumentException("POSIÇÃO INVÁLIDA");
+			throw new IllegalArgumentException("\nPOSIÇÃO INVÁLIDA");
 		} else {
 			return this.contatos[posicao - 1];
 		}
@@ -84,13 +84,13 @@ public class Agenda {
 		for (Contato fav : this.favoritos) {
 			if (fav != null) {
 				if (fav.equals(testeContato)){
-					throw new IllegalArgumentException("O CONTATO JÁ SE ENCONTRA NOS FAVORITOS");
+					throw new IllegalArgumentException("\nO CONTATO JÁ SE ENCONTRA NOS FAVORITOS");
 				}
 			}
 		}
 
 		if (posicao < 0 || posicao > 100) {
-			throw new IllegalArgumentException("POSIÇÃO INVÁLIDA");
+			throw new IllegalArgumentException("\nPOSIÇÃO INVÁLIDA");
 		}
 	}
 

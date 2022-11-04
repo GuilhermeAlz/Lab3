@@ -128,8 +128,8 @@ public class MainAgenda {
 				}
 			}
 			System.out.println("\n" + contato);
-		} catch (Exception e) {
-			e.getMessage();
+		} catch (IllegalArgumentException e) {
+			System.out.println(e.getMessage()); 
 		}
 		
 	}
@@ -169,7 +169,7 @@ public class MainAgenda {
 			agenda.cadastraContato(posicao, nome, sobrenome, telefone);
 			System.out.println("\nCADASTRO REALIZADO");
 			
-		} catch (Exception e) {
+		} catch (IllegalArgumentException e) {
 			System.out.println(e.getMessage());
 		}
 	}
@@ -184,8 +184,8 @@ public class MainAgenda {
 		try {
 			agenda.adicionaFavorito(nContato, posicao);
 			System.out.println("\nCONTATO FAVORITADO NA POSIÇÃO " + posicao);	
-		} catch (Exception e) {
-			e.getMessage();
+		} catch (IllegalArgumentException e) {
+			System.out.println(e.getMessage());
 		}
 	}
 
