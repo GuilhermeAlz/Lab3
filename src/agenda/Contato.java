@@ -1,14 +1,12 @@
 package agenda;
 
 public class Contato {
-    private int posicao;
     private String nome;
     private String sobrenome;
     private String telefone;
 
     
-    public Contato(int posicao, String nome, String sobrenome, String telefone) {
-        this.posicao = posicao;
+    public Contato(String nome, String sobrenome, String telefone) {
         this.nome = nome;
         this.sobrenome = sobrenome;
         this.telefone = telefone;

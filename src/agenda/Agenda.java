@@ -56,7 +56,7 @@ public class Agenda {
 	 */
 	public void cadastraContato(int posicao, String nome, String sobrenome, String telefone) {
 		verificaCadastroContato(posicao, nome, sobrenome, telefone);
-		this.contatos[posicao - 1] = new Contato(posicao, nome, sobrenome, telefone);
+		this.contatos[posicao - 1] = new Contato(nome, sobrenome, telefone);
 	}
 
 	private void verificaCadastroContato(int posicao, String nome, String sobrenome, String telefone) {
@@ -68,7 +68,7 @@ public class Agenda {
 			throw new IllegalArgumentException("\nCONTATO INVÁLIDO");
 		}
 
-		Contato testeContato = new Contato(posicao, nome, sobrenome, telefone);
+		Contato testeContato = new Contato(nome, sobrenome, telefone);
 		for (Contato con : this.contatos) {
 			if (con != null) {
 				if (con.equals(testeContato)) {
